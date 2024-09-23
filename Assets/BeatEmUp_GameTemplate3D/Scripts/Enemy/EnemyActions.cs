@@ -441,7 +441,7 @@ public class EnemyActions : MonoBehaviour {
 			dirToTarget = target.transform.position - (transform.position + new Vector3 (0, 0, ZSpread));
 		}
 
-		//we are too far away, move closer
+		//мы очень далеко, подойти ближе
 		if (distance >= proximityRange ) {
 			moveDirection = new Vector3(dirToTarget.x,0,dirToTarget.z);
 			if (IsGrounded() && !WallSpotted() && !PitfallSpotted()) {
@@ -451,7 +451,7 @@ public class EnemyActions : MonoBehaviour {
 			}
 		}
 
-		//we are too close, move away
+		//мы очень близко, отойти дальше
 		if (distance <= proximityRange - movementMargin) {
 			moveDirection = new Vector3(-dirToTarget.x,0,0);
 			if (IsGrounded() && !WallSpotted() && !PitfallSpotted()) {

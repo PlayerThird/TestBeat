@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     public float landRecoveryTime = .1f;
     public float landTime = 0;
     public LayerMask CollisionLayer;
-    public LayerMask LadderLayer;
 
     [Header("Audio")] public string jumpUpVoice = "";
     public string jumpLandVoice = "";

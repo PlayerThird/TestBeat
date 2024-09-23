@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/BeatEmUp_GameTemplate3D/04_TrainingRoom.unity
     guid: 5de5d1375dd2f2f429938096cabb81a3
   - enabled: 1
-    path: Assets/BeatEmUp_GameTemplate3D/05_ParkourGenerated.unity
+    path: Assets/BeatEmUp_GameTemplate3D/06_GeneratedLevel.unity
     guid: 5045551ef4aa2804bb82bafeeafc8526
+  - enabled: 1
+    path: Assets/BeatEmUp_GameTemplate3D/05_ParkourGenerated.unity
+    guid: ca7e243e3a3870141a2a776b7171d14d
   m_configObjects: {}

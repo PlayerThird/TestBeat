@@ -40,12 +40,12 @@ public class CameraFollow : MonoBehaviour {
 
 			if(targets.Length == 1){
 
-				//follow a single target
+				//следовать за одной целью
 				if(targets[0] != null) MiddlePosition = targets[0].transform.position;
 
 			} else {
 
-				//find center position between multiple targets
+				//ищем центр между несколькими целями
 				int count = 0;
 				for(int i=0; i<targets.Length; i++){
 					if(targets[i]){
@@ -82,7 +82,7 @@ public class CameraFollow : MonoBehaviour {
 				currentZ = FollowZAxis? (MiddlePosition.z + distanceToTarget) : distanceToTarget;
 			}
 
-			//Set cam position
+			//установить позицию камеры
 			if(CurrentAreaCollider == null) UseWaveAreaCollider = false;
 			if (!UseWaveAreaCollider) {
 				transform.position = new Vector3 (Mathf.Clamp (currentX, MaxRight, MinLeft), currentY, currentZ) + AdditionalOffset;
@@ -90,7 +90,7 @@ public class CameraFollow : MonoBehaviour {
 				transform.position = new Vector3 (Mathf.Clamp (currentX, CurrentAreaCollider.transform.position.x + AreaColliderViewOffset, MinLeft), currentY, currentZ) + AdditionalOffset;
 			}
 
-			//Set cam rotation
+			//установить поворот камеры
 			transform.rotation = new Quaternion(0,180f,viewAngle,0);
 		}
 	}

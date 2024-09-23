@@ -228,7 +228,7 @@ MonoBehaviour:
   - corridor
   Exits: {fileID: 6939146243761094065}
   Bounds: {fileID: 6311786956086266649}
-  DeadEndChance: 10
+  DeadEndChance: 1
 --- !u!1 &5125532012662386709
 GameObject:
   m_ObjectHideFlags: 0

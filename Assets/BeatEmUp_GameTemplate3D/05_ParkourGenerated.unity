@@ -800,6 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018597900}
   - component: {fileID: 2018597899}
+  - component: {fileID: 2018597902}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -831,7 +832,7 @@ MonoBehaviour:
   DampZ: 3
   MinLeft: 1000
   MaxRight: -1000
-  UseWaveAreaCollider: 0
+  UseWaveAreaCollider: 1
   CurrentAreaCollider: {fileID: 0}
   AreaColliderViewOffset: 4.5
 --- !u!4 &2018597900
@@ -851,6 +852,18 @@ Transform:
   - {fileID: 1276555736}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 7.347, y: 180.00002, z: 0}
+--- !u!114 &2018597902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018597898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49d2748c99694740a590e58c51e3791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
