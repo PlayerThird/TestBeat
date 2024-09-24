@@ -17,17 +17,3 @@ public class UserData
     }
 }
 
-/*public partial class PlayerData
-{
-    public Vector3 pos, rotation, scale;
-}*/
-
-public class LevelCoord
-{
-    public Transform coord;
-}
-
-public class JsonData
-{
-    public List<UserData> Items { get; set; }
-}

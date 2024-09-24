@@ -676,7 +676,7 @@ MonoBehaviour:
   MaxAttackers: 5
   EnemyWaves:
   - WaveName: 
-    AreaCollider: {fileID: 1960497222564889470}
+    AreaCollider: {fileID: 1455474840416474385}
     EnemyList:
     - {fileID: 8715612850190395765}
     - {fileID: 2602861439128049462}

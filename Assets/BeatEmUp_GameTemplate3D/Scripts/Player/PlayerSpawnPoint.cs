@@ -3,6 +3,8 @@
 public class PlayerSpawnPoint : MonoBehaviour {
 
 	public GameObject defaultPlayerPrefab;
+	[SerializeField]
+	public float newZ = 4.5f;//Скорость глубины хода, для битэмапа и 2Д
 
 	void Awake(){
 
@@ -23,6 +25,7 @@ public class PlayerSpawnPoint : MonoBehaviour {
 	//загрузка префаба игрока
 	void loadPlayer(GameObject playerPrefab){
 		GameObject player = GameObject.Instantiate(playerPrefab) as GameObject;
+		player.GetComponent<PlayerMovement>().SetZspread(newZ);
 		player.transform.position = transform.position;
 	}
 }

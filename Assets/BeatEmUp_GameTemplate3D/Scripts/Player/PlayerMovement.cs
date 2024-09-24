@@ -386,7 +386,12 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position + Vector3.up * (c.radius + .1f) + -MovementOffset, c.radius);
     }
 #endif
+    public void SetZspread(float newZ)
+    {
+        ZSpeed = newZ;
+    }
 }
+
 
 public enum DIRECTION
 {

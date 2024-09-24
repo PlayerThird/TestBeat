@@ -41,13 +41,21 @@ public class HealthSystem : MonoBehaviour {
 		CurrentHp = Mathf.Clamp(CurrentHp += amount, 0, MaxHp);
 		SendHealthUpdateEvent();
 	}
-
 	//health update event
 	void SendHealthUpdateEvent(){
 		float CurrentHealthPercentage = 1f/MaxHp * CurrentHp;
 		if(onHealthChange != null) onHealthChange(CurrentHealthPercentage, gameObject);
 	}
 
+	public int BackCurrentHP()
+	{
+		return CurrentHp;
+	}
+
+	public void SetHealth(int newHp)
+	{
+		CurrentHp = newHp;
+	}
 	//смерть
 	bool isDead(){
 		return CurrentHp == 0;

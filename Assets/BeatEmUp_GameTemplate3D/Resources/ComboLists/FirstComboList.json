@@ -1,0 +1,18 @@
+{
+    "combos": [
+        {
+            "attacks": [
+                "Hand",
+                "Foot"
+            ],
+            "animationTrigger": "Punch1"
+        },
+        {
+            "attacks": [
+                "Hand",
+                "Hand"
+            ],
+            "animationTrigger": "Punch3"
+        }
+    ]
+}

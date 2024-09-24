@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 [RequireComponent (typeof(Rigidbody))]
@@ -73,6 +75,12 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 	private bool updateVelocity;
 	private string lastAttackInput;
 	private DIRECTION lastAttackDirection;
+	//Эксперимент
+	private List<string> inputBuffer = new List<string>();
+	private float inputBufferTime = 0.5f; // Время, в течение которого сохраняются нажатия
+	private ComboManager comboManager;
+	public ComboList comboList;
+
 
 	//список состояний, когда игрок может атаковать
 	private List<UNITSTATE> AttackStates = new List<UNITSTATE> {
@@ -153,6 +161,8 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 			HitableStates.Add (UNITSTATE.JUMPING);
 			HitableStates.Add (UNITSTATE.JUMPKICK);
 		}
+		//Доделать чтобы список доступных комбо выпадал, или несколько комбо в одну записать
+		comboList.LoadFromJson("Resources/ComboLists/FirstComboList.json");
 	}
 
 	void Update() {
@@ -162,7 +172,36 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 
 		//обновлять состояние каждый кадр
 		Defend(InputManager.defendKeyDown);
+		
+		if (Input.GetKeyDown(KeyCode.A)) // Рука
+		{
+			inputBuffer.Add("Рука");
+			StartCoroutine(ClearInputBuffer());
+			CheckCombos();
+		}
 	}
+	
+	IEnumerator ClearInputBuffer()
+	{
+		yield return new WaitForSeconds(inputBufferTime);
+		inputBuffer.Clear();
+	}
+	void CheckCombos()
+	{
+		foreach (Combo combo in comboManager.combos)
+		{
+			if (inputBuffer.SequenceEqual(combo.attacks))
+			{
+				animator.SetAnimatorTrigger(combo.animationTrigger);
+				// Другие действия
+				inputBuffer.Clear();
+				break;
+			}
+		}
+	}
+	
+	
+	
 
 	//обновление физики
 	void FixedUpdate(){

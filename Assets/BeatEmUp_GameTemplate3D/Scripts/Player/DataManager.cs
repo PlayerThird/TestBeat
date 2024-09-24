@@ -26,8 +26,8 @@ public class DataManager : MonoBehaviour
 
     public UserData DownloadData(UserData userData)
     {
-        userData = JsonUtility.FromJson<UserData>(File.ReadAllText(Application.streamingAssetsPath +
-                                                                   "/PlayerData.json"));
+        userData = JsonUtility.FromJson<UserData>(
+            File.ReadAllText(Application.streamingAssetsPath + "/PlayerData.json"));
         return userData;
     }
 
@@ -47,9 +47,5 @@ public class DataManager : MonoBehaviour
             hp = usrData.hp;
             damageMulti = usrData.damageMulti;
         }
-    }
-
-    private void Awake()
-    {
     }
 }
