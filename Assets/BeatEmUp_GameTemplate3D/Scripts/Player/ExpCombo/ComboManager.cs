@@ -7,7 +7,7 @@ public class Combo
 {
     public List<string> attacks;
     public string animationTrigger;
-    // Другие параметры
+    public DamageObject atk;
 }
 
 public class ComboManager : MonoBehaviour

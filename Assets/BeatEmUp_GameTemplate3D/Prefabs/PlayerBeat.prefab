@@ -1419,9 +1419,6 @@ MonoBehaviour:
   CollisionLayer:
     serializedVersion: 2
     m_Bits: 2048
-  LadderLayer:
-    serializedVersion: 2
-    m_Bits: 32768
   jumpUpVoice: PlayerJump
   jumpLandVoice: PlayerLand
   currentDirection: -1
@@ -1443,135 +1440,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponBone: {fileID: 4218021547317652}
   hitZRange: 2.2
-  PunchCombo:
-  - animTrigger: Punch1
-    playerState: 0
-    atkState: 0
-    damage: 1
-    duration: 0.22
-    comboResetTime: 0.35
-    forwardForce: 0
-    knockBackForce: 0
-    hitSFX: DefaultHit
-    knockDown: 0
-    slowMotionEffect: 0
-    DefenceOverride: 0
-    isGroundAttack: 0
-    animationClip: {fileID: 0}
-    animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.76
-    collHeight: 1.17
-    hitTime: 0
-    inflictor: {fileID: 1443228785723502}
-  - animTrigger: Punch2
-    playerState: 0
-    atkState: 0
-    damage: 2
-    duration: 0.3
-    comboResetTime: 0.35
-    forwardForce: 0
-    knockBackForce: 0
-    hitSFX: DefaultHit
-    knockDown: 0
-    slowMotionEffect: 0
-    DefenceOverride: 0
-    isGroundAttack: 0
-    animationClip: {fileID: 0}
-    animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.76
-    collHeight: 1.17
-    hitTime: 0
-    inflictor: {fileID: 1443228785723502}
-  - animTrigger: Punch3
-    playerState: 0
-    atkState: 0
-    damage: 3
-    duration: 0.5
-    comboResetTime: 1
-    forwardForce: 0
-    knockBackForce: 0
-    hitSFX: HeavyHit
-    knockDown: 1
-    slowMotionEffect: 0
-    DefenceOverride: 0
-    isGroundAttack: 0
-    animationClip: {fileID: 0}
-    animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.76
-    collHeight: 1.17
-    hitTime: 0
-    inflictor: {fileID: 1443228785723502}
-  KickCombo:
-  - animTrigger: Kick1
-    playerState: 0
-    atkState: 0
-    damage: 2
-    duration: 0.45
-    comboResetTime: 0.35
-    forwardForce: 0
-    knockBackForce: 0
-    hitSFX: DefaultHit
-    knockDown: 0
-    slowMotionEffect: 0
-    DefenceOverride: 0
-    isGroundAttack: 0
-    animationClip: {fileID: 0}
-    animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.95
-    collHeight: 1.1
-    hitTime: 0
-    inflictor: {fileID: 0}
+  AnyCombo:
   - animTrigger: Kick2
     playerState: 0
+    actionTrigger: Kick
     atkState: 0
     damage: 3
-    duration: 0.45
-    comboResetTime: 0.35
-    forwardForce: 0
-    knockBackForce: 0
-    hitSFX: HeavyHit
-    knockDown: 1
-    slowMotionEffect: 1
-    DefenceOverride: 0
-    isGroundAttack: 0
-    animationClip: {fileID: 0}
-    animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.96
-    collHeight: 1.15
-    hitTime: 0
-    inflictor: {fileID: 0}
-  AnyCombo:
-  - animTrigger: Punch1
-    playerState: 0
-    atkState: 1
-    damage: 0
-    duration: 0
-    comboResetTime: 0
-    forwardForce: 0
-    knockBackForce: 0
-    hitSFX: 
-    knockDown: 0
-    slowMotionEffect: 0
-    DefenceOverride: 0
-    isGroundAttack: 0
-    animationClip: {fileID: 0}
-    animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.5
-    collHeight: 3
-    hitTime: 0
-    inflictor: {fileID: 0}
-  - animTrigger: Kick1
-    playerState: 0
-    atkState: 0
-    damage: 0
-    duration: 0
-    comboResetTime: 0
+    duration: 0.43
+    comboResetTime: 2
     forwardForce: 0
     knockBackForce: 0
     hitSFX: 
@@ -1581,80 +1457,111 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
+    numInCombo: 0
     CollSize: 1
     collDistance: 1
     collHeight: 1
-    hitTime: 0
+    hitTime: 2
     inflictor: {fileID: 0}
-  - animTrigger: Punch2
+  - animTrigger: Kick1
     playerState: 0
-    atkState: 1
-    damage: 5
-    duration: 2
-    comboResetTime: 1
+    actionTrigger: Kick
+    atkState: 0
+    damage: 4
+    duration: 0.64
+    comboResetTime: 0.51
     forwardForce: 0
     knockBackForce: 0
     hitSFX: 
-    knockDown: 1
+    knockDown: 0
     slowMotionEffect: 1
     DefenceOverride: 0
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
-    CollSize: 5
-    collDistance: 5
-    collHeight: 5
-    hitTime: 0
+    numInCombo: 1
+    CollSize: 1
+    collDistance: 1
+    collHeight: 1
+    hitTime: 1
     inflictor: {fileID: 0}
-  - animTrigger: Punch2
+  - animTrigger: Kick3
     playerState: 0
-    atkState: 1
+    actionTrigger: Kick
+    atkState: 0
     damage: 5
-    duration: 2
-    comboResetTime: 1
+    duration: 0.7
+    comboResetTime: 0.8
     forwardForce: 0
     knockBackForce: 0
     hitSFX: 
-    knockDown: 1
+    knockDown: 0
     slowMotionEffect: 1
     DefenceOverride: 0
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
-    CollSize: 5
-    collDistance: 5
-    collHeight: 5
-    hitTime: 0
+    numInCombo: 2
+    CollSize: 2
+    collDistance: 1
+    collHeight: 2
+    hitTime: 2
     inflictor: {fileID: 0}
-  - animTrigger: Punch2
+  - animTrigger: Punch1
     playerState: 0
+    actionTrigger: Punch
     atkState: 1
-    damage: 5
-    duration: 2
-    comboResetTime: 1
+    damage: 3
+    duration: 0.84
+    comboResetTime: 1.31
     forwardForce: 0
     knockBackForce: 0
     hitSFX: 
-    knockDown: 1
+    knockDown: 0
     slowMotionEffect: 1
     DefenceOverride: 0
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
-    CollSize: 5
-    collDistance: 5
-    collHeight: 5
-    hitTime: 0
+    numInCombo: 0
+    CollSize: 1
+    collDistance: 1
+    collHeight: 1
+    hitTime: 1
     inflictor: {fileID: 0}
+  - animTrigger: Punch2
+    playerState: 0
+    actionTrigger: Punch
+    atkState: 1
+    damage: 3
+    duration: 0.52
+    comboResetTime: 1
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: 
+    knockDown: 0
+    slowMotionEffect: 1
+    DefenceOverride: 0
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    numInCombo: 1
+    CollSize: 1
+    collDistance: 1
+    collHeight: 1
+    hitTime: 1
+    inflictor: {fileID: 0}
+  maxValCombo: 0
   JumpKickData:
     animTrigger: JumpKick
     playerState: 0
+    actionTrigger: 
     atkState: 0
     damage: 3
     duration: 1
     comboResetTime: 0
     forwardForce: 0
-    knockBackForce: 0
+    knockBackForce: 1
     hitSFX: DefaultHit
     knockDown: 1
     slowMotionEffect: 1
@@ -1662,14 +1569,16 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
+    numInCombo: 0
     CollSize: 1.2
     collDistance: 0.58
     collHeight: 1.2
-    hitTime: 0
+    hitTime: 1
     inflictor: {fileID: 0}
   GroundPunchData:
     animTrigger: GroundPunch
     playerState: 0
+    actionTrigger: 
     atkState: 0
     damage: 2
     duration: 0.68
@@ -1683,6 +1592,7 @@ MonoBehaviour:
     isGroundAttack: 1
     animationClip: {fileID: 0}
     animationSpeed: 0
+    numInCombo: 0
     CollSize: 1.1
     collDistance: 0.73
     collHeight: 0.2
@@ -1691,6 +1601,7 @@ MonoBehaviour:
   GroundKickData:
     animTrigger: GroundKick
     playerState: 0
+    actionTrigger: 
     atkState: 0
     damage: 2
     duration: 1.1
@@ -1704,6 +1615,7 @@ MonoBehaviour:
     isGroundAttack: 1
     animationClip: {fileID: 0}
     animationSpeed: 0
+    numInCombo: 0
     CollSize: 1.1
     collDistance: 0.73
     collHeight: 0.2
@@ -1712,9 +1624,10 @@ MonoBehaviour:
   RunningPunch:
     animTrigger: RunningPunch
     playerState: 0
+    actionTrigger: 
     atkState: 0
     damage: 3
-    duration: 0.6
+    duration: 0.36
     comboResetTime: 0
     forwardForce: 15
     knockBackForce: 5
@@ -1725,6 +1638,7 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
+    numInCombo: 0
     CollSize: 1
     collDistance: 0.55
     collHeight: 0.82
@@ -1733,9 +1647,10 @@ MonoBehaviour:
   RunningKick:
     animTrigger: RunningKick
     playerState: 0
+    actionTrigger: 
     atkState: 0
     damage: 3
-    duration: 0.7
+    duration: 0.31
     comboResetTime: 0
     forwardForce: 15
     knockBackForce: 5
@@ -1746,6 +1661,7 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
+    numInCombo: 0
     CollSize: 1
     collDistance: 0.55
     collHeight: 0.82
@@ -1772,6 +1688,7 @@ MonoBehaviour:
   currentDirection: -1
   itemInRange: {fileID: 0}
   targetHit: 0
+  comboList: {fileID: 0}
 --- !u!114 &-1962089609471434917
 MonoBehaviour:
   m_ObjectHideFlags: 0

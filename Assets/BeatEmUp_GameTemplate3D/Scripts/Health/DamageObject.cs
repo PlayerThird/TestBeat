@@ -6,6 +6,7 @@ public class DamageObject
 {
     public string animTrigger = "";
     public UNITSTATE playerState;
+    public string actionTrigger = "";
 
     [SerializeField] public Atakstate atkState;
 
@@ -21,6 +22,7 @@ public class DamageObject
     [HideInInspector] public bool isGroundAttack;
     [HideInInspector] public AnimationClip animationClip;
     [HideInInspector] public float animationSpeed = 1f;
+    public int numInCombo;
 
     [Header("Hit Collider Settings")] public float CollSize;
     public float collDistance;

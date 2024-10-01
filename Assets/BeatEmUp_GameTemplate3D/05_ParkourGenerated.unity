@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelMusic: ZZZMusic
   showMenuAtStart: HUD
-  playMusic: 1
+  playMusic: 0
   createInputManager: 1
   createUI: 1
   createAudioPlayer: 1
